@@ -146,6 +146,38 @@
         </a>
       </div> -->
 
+      <!-- Messenger Chat plugin Code -->
+      <div id="fb-root"></div>
+
+      <!-- Your Chat plugin code -->
+      <div id="fb-customer-chat" class="fb-customerchat">
+      </div>
+
+      <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "498430057183101");
+        chatbox.setAttribute("attribution", "biz_inbox");
+      </script>
+
+      <!-- Your SDK code -->
+      <script>
+        window.fbAsyncInit = function () {
+          FB.init({
+            xfbml: true,
+            version: 'v13.0'
+          });
+        };
+
+        (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
     </div>
   </header>
   <!--
@@ -161,7 +193,7 @@
       !-->
 
   <main class="main-content">
-    <div class="section bg-gray pt-5">
+    <div class="section bg-gray pt-0">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-xl-8">
@@ -171,7 +203,7 @@
                 <div class="card">
                   <div class="card-body text-center  bg-success">
                     <a href="#" class="">
-                      <h5 class="border-bottom text-white">1st Semester Course Structure with Publications</h5>
+                      <h5 class="border-bottom text-white"> sajib 1st Semester Course Structure with Publications</h5>
                     </a>
                     <a href="#">
                       <h5 class="border-bottom text-white"> Admission Notice</h5>
@@ -187,10 +219,15 @@
               </div>
 
               <div class="col-md-9 m-0 p-0">
-                <div data-provide="slider" data-arrows="true">
-                  <div><img src="/assets/img/slider/slider_1.jpeg" width="100%"></div>
-                  <div><img src="/assets/img/slider/slider_2.jpeg" width="100%"></div>
+                <div data-provide="slider" data-arrows="true" data-ride="carousel">
+                  <div>
+                    <img src="/assets/img/slider/slider_1.jpeg" width="100%">
+                  </div>
+                  <div>
+                    <img src="/assets/img/slider/slider_2.jpeg" width="100%">
+                  </div>
                 </div>
+
               </div>
             </div>
 
